@@ -1,9 +1,8 @@
 const addButton = document.getElementById("addButton");
-//addButton.style.backgroundImage = "url('images/add.png)";
 addButton.addEventListener("click", addClicked);
 
-// const searchButton = document.getElementById("searchButton");
-// searchButton.addEventListener("click", searchClicked);
+const searchButton = document.getElementById("searchButton");
+searchButton.addEventListener("click", searchClicked);
 
 var numEntries = 0;
 
@@ -97,11 +96,32 @@ function deleteEntry() {
 function searchClicked() {
     var targetString = document.getElementById("searchbar").value;
     console.log(targetString);
-    chrome.storage.sync.get(null, (items) => {
-        var allKeys = Object.keys(items);
-        var allValues = Object.values(items);
-        for(var i = 0; i < allKeys.length; i++) {
-            
+    var targetString = document.getElementById("searchbar").value;
+    // console.log(targetString);
+    var keys = document.getElementsByClassName('entryKey');
+    var vals = document.getElementsByClassName('entryValue');
+    var toHide = [];
+    for (var i = 0; i < vals.length; i++) {
+        var div = keys[i].parentElement;
+        var keyText = keys[i].innerHTML;
+        var valText = vals[i].value;
+        var allText = keyText + " " + valText;
+        console.log(allText.includes(targetString));
+        if (!allText.includes(targetString)) {
+            toHide.push(div);
+            // console.log(allText);
+            //div.remove();
         }
-    });
+    }
+
+    for (i in toHide) {
+        toHide[i].remove();
+    }
+}
+
+function removeEntries() {
+    var entriesDiv = document.getElementById('entries');
+    while(entriesDiv.firstChild) {
+        entriesDiv.removeChild(entriesDiv.firstChild);
+    }
 }

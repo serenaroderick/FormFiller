@@ -45,13 +45,17 @@ button, input {
 }
 
 #searchbar {
-    width: 250px;
+    width: 300px;
 }
 #search {
-    margin:10px;
+    margin-bottom:10px;
 }
 
-.deleteButton, .copyButton, #addButton {
+#searchButton {
+    background-image: url('images/search.png');
+}
+
+.deleteButton, .copyButton, #addButton, #searchButton {
     width: 18px;
     height:18px;
     background-repeat: no-repeat;
