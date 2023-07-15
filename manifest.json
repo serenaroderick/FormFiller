@@ -1,8 +1,8 @@
 {
     "manifest_version": 3,
-    "name": "Form Filler",
+    "name": "Quick Clip",
     "version": "1.0",
-    "description": "Autofill made easy",
+    "description": "Simplify Form Filling with a Custom Clipboard",
     "action": {
         "default_popup": "formFiller.html",
         "default_icon": "images/icon-16.png"
