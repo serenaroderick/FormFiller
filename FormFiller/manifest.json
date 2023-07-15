@@ -1,0 +1,32 @@
+{
+    "manifest_version": 3,
+    "name": "Quick Clip",
+    "version": "1.0",
+    "description": "Simplify Form Filling with a Custom Clipboard",
+    "action": {
+        "default_popup": "formFiller.html",
+        "default_icon": "images/icon-16.png"
+    },
+        
+    "icons": {
+    "16": "images/icon-16.png",
+    "24": "images/icon-24.png",
+    "32": "images/icon-32.png",
+    "64": "images/icon-64.png",
+    "128": "images/icon-128.png"
+    },
+
+    "permissions": [
+        "storage"
+    ],
+
+    "content_scripts": [
+        {
+        "js": ["content.js"],
+        "matches": [
+            "https://developer.chrome.com/docs/extensions/*",
+            "https://developer.chrome.com/docs/webstore/*"
+        ]}
+    ]
+
+}

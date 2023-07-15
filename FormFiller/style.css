@@ -1,0 +1,62 @@
+* {
+    /* font-family: 'Josefin Sans';
+    font-family: 'Saira Condensed'; */
+    font-family: 'Barlow Semi Condensed';
+    background-color: rgb(19, 19, 19);
+    color: white;
+    font-size: small;
+    margin-left: 2px;
+} 
+
+body {
+    border-radius: 200px;
+    width: 350px;
+    border-radius: 100px;
+    border-radius: 5px;
+    box-shadow: 0 30px 50px 0 rgba(44,49,59,0.20);
+}
+
+
+#entries {
+    width: 365px;
+}
+
+button, input {
+    background-color: rgb(0, 0, 0);
+    border-radius: 5px;
+    border: none;
+    padding: 5px;
+    margin-right: 5px;
+    display: inline;
+    width: 140px;
+}
+
+/* button {
+    width: 50px;
+} */
+
+#entryRow {
+    width: auto;
+    display: block;
+}
+
+.entryValue {
+    width: 280px;
+}
+
+#searchbar {
+    width: 250px;
+}
+#search {
+    margin:10px;
+}
+
+.deleteButton, .copyButton, #addButton {
+    width: 18px;
+    height:18px;
+    background-repeat: no-repeat;
+}
+
+#addButton {
+    background-image: url('images/add.png');
+}
